@@ -1,134 +1,285 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    background-color: #cba96b;
+	background-color: #cba96b;
     background-image: url('/Web-Bere/img/doc.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
+	min-height: 100vh;
+	height: auto;
 }
 
 body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2); 
-    backdrop-filter: blur(3px);
-    z-index: -1;
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(3px);
+	z-index: -1;
+	display: block;
 }
+
 .navbar {
-    height: 60px; 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 20px;
-    background-color: #8B6F47;
+	height: 60px;
+	padding: 5px 20px;
+	background: rgba(139, 111, 71, 0.85);
+	backdrop-filter: blur(3px);
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+	transition: all 0.3s ease-in-out;
 }
 
 .navbar-logo img {
-    width: 65px; 
-    height: auto;
+	width: 65px;
+	height: auto;
 }
 
 .nav-link {
-    color: #ffffff;
+	color: #ffffff;
 }
 
 footer {
-    display: flex;
-    padding: 5px 0; 
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    flex-wrap: wrap;
-    height: 50px;
-    font-family: 'Poppins', sans-serif; 
-    color: #ffffff; 
-    background-color: #8B6F47;
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+	display: flex;
+	padding: 10px 20px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	min-height: 60px;
+	font-family: 'Poppins', sans-serif;
+	color: #ffffff;
+	justify-content: space-between;
+	align-items: center;
+	background: rgba(139, 111, 71, 0.85);
+	backdrop-filter: blur(3px);
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 .contenedor-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
 
 .footer-texto {
-    font-size: 14px; 
-    margin: 0;
-    color: #ffffff; 
+	font-size: 14px;
+	margin: 0;
+	color: #ffffff;
 }
 
 .footer-logo {
-    width: 40px; 
+	width: 40px;
 }
 
 .iconos-redes {
-    display: flex;
-    gap: 8px;
+	display: flex;
+	gap: 8px;
 }
 
 .iconos-redes img {
-    width: 16px; 
+	width: 16px;
 }
 
-
+/* Media Queries */
 @media (max-width: 767px) {
-    body {
-    background-position: center;
-    }
+	body {
+		background-attachment: fixed;
+		background-size: cover;
+		background-position: center top;
+	}
 
-    .navbar {
-    height: auto;
-    }
-    
-    footer {
-        height: auto; 
-        padding: 15px 10px;
-        text-align: center; 
-    }
+	.navbar {
+		height: auto;
+	}
 
-    .contenedor-footer {
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-        gap: 8px; 
-    }
+	footer {
+		padding: 15px 10px;
+		text-align: center;
+	}
 
-    .footer-logo {
-        width: 20px; 
-    }
+	.contenedor-footer {
+		flex-direction: column;
+		align-items: center;
+		gap: 8px;
+	}
 
-    .footer-texto {
-        font-size: 12px;
-        line-height: 1.3; 
-        text-align: center;
-        width: 90%;
-    }
+	.footer-logo {
+		width: 20px;
+	}
 
-    .iconos-redes {
-        display: flex;
-        justify-content: center;
-        gap: 10px; 
-        flex-wrap: wrap; 
-    }
+	.footer-texto {
+		font-size: 12px;
+		line-height: 1.3;
+		width: 90%;
+	}
 
-    .iconos-redes img {
-        width: 20px; 
-    }
+	.iconos-redes {
+		justify-content: center;
+		gap: 10px;
+	}
+
+	.iconos-redes img {
+		width: 20px;
+	}
+
+	.tratamientos {
+		text-align: center;
+		padding: 20px;
+	}
+
+	.tratamiento {
+		margin-bottom: 15px;
+		padding: 20px;
+		border-radius: 10px;
+		width: 90%;
+		max-width: 350px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+	.boton {
+		display: block;
+		width: 90%;
+		max-width: 200px;
+		margin: 15px auto;
+	}
+
+	.encabezado {
+		padding: 30px;
+		margin: 20px auto;
+		width: 85%;
+		max-width: 320px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.encabezado p {
+		font-size: 1rem;
+	}
+
+	.encabezado .btn-container {
+		display: flex;
+		gap: 10px;
+		justify-content: center;
+	}
+
+	.encabezado .btn-custom {
+		padding: 10px 15px;
+		font-size: 0.9rem;
+	}
+}
+
+.parrafos {
+	font-size: 14px;
+	font-weight: 500;
+	font-family: Arial, sans-serif;
+	color: #333;
+	margin-top: 8px;
+	line-height: 1.4;
+}
+
+.encabezado {
+	background: rgba(255, 255, 255, 0.8);
+	padding: 60px;
+	border-radius: 10px;
+	margin-top: 40px;
+	text-align: center;
+}
+
+.titulo {
+	font-size: 2.5rem;
+	color: #5A3E1B;
+	font-weight: bold;
+}
+
+.subtitulo {
+	font-size: 1.5rem;
+	color: #A58E6E;
+}
+
+.beneficio-principal {
+	background: white;
+	padding: 15px;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	width: 100%;
+	max-width: 280px;
+	margin: auto;
+	transition: transform 0.3s ease-in-out;
+}
+
+.beneficio-principal:hover {
+	transform: scale(1.05);
+}
+
+.beneficio-principal img {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+	display: block;
+	border-radius: 6px;
+}
+
+.tratamientos-contenedor {
+	margin-top: 50px;
+	text-align: center;
+	padding-bottom: 60px;
+	color: #5A3E1B;
+}
+
+.tratamiento {
+	background: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease-in-out;
+}
+
+.tratamiento:hover {
+	transform: scale(1.05);
+}
+
+/* esta clase la hice pq sino el boton se quedaba pegado a los tratamientos xd */
+.personalizado {
+	margin-top: 40px;
+}
+
+.boton {
+	background-color: #8B6F4E;
+	color: white;
+	border: none;
+	padding: 12px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 6px;
+	transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+}
+
+.boton:hover {
+	background-color: #715739;
+	transform: scale(1.05);
+	color: black;
+}
+
+/* Espaciado extra en el main para q el footer no me tape el contenido xd */
+main {
+	padding-bottom: 5rem;
 }
