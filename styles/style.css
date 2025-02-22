@@ -6,7 +6,7 @@
  
 body {
 	background-color: #cba96b;
-    background-image: url('/Web-Bere/img/doc.png');
+    background-image: url('../img/doc.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center top;
@@ -369,6 +369,7 @@ main {
     font-size: 1rem;
     color: #333;
 }
+
 /* A partir de acá va la page contacto */
 
 .form-contacto, .mapa-cont {
@@ -406,6 +407,96 @@ main {
 .mapa-cont iframe {
     width: 100%;
     max-width: 100%;
-    height: 300px; /* Puedes ajustar la altura */
+    height: 300px; 
     border: 0;
+}
+
+/* Page precios */
+.precios {
+    padding: 60px 20px;
+    border-radius: 10px;
+}
+
+.tratamiento-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f9f5e1;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+}
+
+.tratamiento-card:hover {
+    transform: scale(1.05);
+}
+
+.card-item {
+    color: #5A3E1B;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+}
+
+
+.card-titulo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #5A3E1B;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.card-texto {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #5A3E1B; 
+}
+
+.card-texto strong {
+    color: #8B6F4E; 
+    font-size: 1.2rem; 
+}
+
+.lista-precios {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.lista-precios h3 {
+    font-size: 24px;
+    color: #5A3E1B;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.precios-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.boton-precio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #d4a373;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.boton-precio:hover {
+    background: #b5835a;
+    transform: scale(1.05);
 }
