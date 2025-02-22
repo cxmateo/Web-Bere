@@ -3,7 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
+ 
 body {
 	background-color: #cba96b;
     background-image: url('/Web-Bere/img/doc.png');
@@ -323,4 +323,40 @@ main {
     margin-top: 10px;
     color: #5A3E1B;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* pa aca los tratamientos */
+.tratamiento-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tratamiento-card img {
+    width: 100%;
+    height: auto;
+}
+
+.tratamiento-card .card-item {
+    background: rgba(0, 0, 0, 0.4); 
+    color: #fff; 
+    padding: 15px;
+    border-radius: 0 0 15px 15px; 
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+}
+
+.tratamiento-card .card-titulo {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.tratamiento-card .card-texto {
+    font-size: 1rem;
+    color: #333;
 }
