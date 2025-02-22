@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #cba96b;
+    background-image: url('/img/doc.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(3px);
+    z-index: -1;
+}
+.navbar {
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    background-color: #8B6F47;
+}
+
+.navbar-logo img {
+    width: 65px; 
+    height: auto;
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+footer {
+    display: flex;
+    padding: 5px 0; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    flex-wrap: wrap;
+    height: 50px;
+    font-family: 'Poppins', sans-serif; 
+    color: #ffffff; 
+    background-color: #8B6F47;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-texto {
+    font-size: 14px; 
+    margin: 0;
+    color: #ffffff; 
+}
+
+.footer-logo {
+    width: 40px; 
+}
+
+.iconos-redes {
+    display: flex;
+    gap: 8px;
+}
+
+.iconos-redes img {
+    width: 16px; 
+}
+
+
+@media (max-width: 767px) {
+    body {
+    background-position: center;
+    }
+
+    .navbar {
+    height: auto;
+    }
+    
+    footer {
+        height: auto; 
+        padding: 15px 10px;
+        text-align: center; 
+    }
+
+    .contenedor-footer {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 8px; 
+    }
+
+    .footer-logo {
+        width: 20px; 
+    }
+
+    .footer-texto {
+        font-size: 12px;
+        line-height: 1.3; 
+        text-align: center;
+        width: 90%;
+    }
+
+    .iconos-redes {
+        display: flex;
+        justify-content: center;
+        gap: 10px; 
+        flex-wrap: wrap; 
+    }
+
+    .iconos-redes img {
+        width: 20px; 
+    }
+}
