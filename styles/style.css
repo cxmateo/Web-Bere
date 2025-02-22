@@ -48,7 +48,7 @@ body::before {
 footer {
 	display: flex;
 	padding: 10px 20px;
-	position: fixed;
+	position: relative;
 	bottom: 0;
 	left: 0;
 	width: 100%;
@@ -60,7 +60,7 @@ footer {
 	background: rgba(139, 111, 71, 0.85);
 	backdrop-filter: blur(3px);
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
-}
+    }
 
 .contenedor-footer {
 	display: flex;
@@ -92,7 +92,7 @@ footer {
 }
 
 /* Media Queries */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 	body {
 		background-attachment: fixed;
 		background-size: cover;
@@ -180,7 +180,15 @@ footer {
 	.encabezado .btn-custom {
 		padding: 10px 15px;
 		font-size: 0.9rem;
-	}
+        }
+    .form-contacto, .mapa-cont {
+        padding: 15px;
+    }
+    
+    .boton-form {
+        font-size: 14px;
+        padding: 10px;
+    }        
 }
 
 .parrafos {
@@ -282,6 +290,7 @@ footer {
 /* Espaciado extra en el main para q el footer no me tape el contenido xd */
 main {
 	padding-bottom: 5rem;
+    min-height: 100vh;
 }
 
 /* A PARTIR DE ACA EL ABOUT */
@@ -359,4 +368,44 @@ main {
 .tratamiento-card .card-texto {
     font-size: 1rem;
     color: #333;
+}
+/* A partir de acá va la page contacto */
+
+.form-contacto, .mapa-cont {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.boton-form {
+    width: 100%;
+    background-color: #8B6F4E;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.boton-form:hover {
+    background-color: #715739;
+    transform: scale(1.05);
+}
+
+.mapa-cont {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mapa-cont iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 300px; /* Puedes ajustar la altura */
+    border: 0;
 }
