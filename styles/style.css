@@ -373,11 +373,17 @@ main {
 /* A partir de acá va la page contacto */
 
 .form-contacto, .mapa-cont {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    
+}
+
+.contacto {
+    text-align: center;
 }
 
 .boton-form {
